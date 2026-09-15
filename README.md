@@ -77,16 +77,6 @@ CHUNK_OVERLAP = 200
 
 Change these if you use a different embedding dim or LM Studio port/model.
 
-## Limitations / next steps
-
-- Point IDs use `md5(filename_i_timestamp)` — re-upload duplicates instead of upserting; add deterministic hash for idempotency
-- No eval (faithfulness, retrieval recall), no hybrid search / reranker
-- Title extraction is heuristic (first 15 lines); use GROBID / PDF metadata for robustness
-- `requirements.txt` unpinned; pin for reproducibility
-- No Docker Compose, no auth, single collection for all users
-
-Good next steps for PFE: add `docker-compose.yml` (streamlit + qdrant), eval set, hybrid BM25 + dense, reranking, per-user collections.
-
 ## Author
 
 Nizar Sahl — https://github.com/nmetal05/rag-research-assistant
